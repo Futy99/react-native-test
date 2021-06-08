@@ -1,0 +1,12 @@
+{
+  "name": "oaks-lab",
+  "displayName": "oaks-lab",
+  "expo": {
+    "name": "oaks-lab",
+    "slug": "oaks-lab",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
