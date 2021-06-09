@@ -1,0 +1,1 @@
+- app was tested on IOS simulator and expo android

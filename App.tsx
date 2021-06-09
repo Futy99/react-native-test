@@ -1,19 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { theme } from './src/utils/theme';
+import Homepage from './src/screens/Homepage/index'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <SafeAreaView style={Colors.lighter}>
+      <StatusBar barStyle="light-content" />
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={{backgroundColor: Colors.lighter, height: '100%'}}>
+          <View style={{backgroundColor: theme.white, width: '80%', padding: 20, marginTop: 40, marginLeft: 'auto', marginRight: 'auto'}}>
+            <Homepage/>
+          </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
